@@ -15,35 +15,73 @@
             h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
             })(document);
     </script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
-        .title{
-            font-family: 'Noto Serif KR', serif;
-            font-size: 2em;
-        }
-        .dkdkdk{
-            font-family: song-myung, serif;
-            font-size: 3em;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <button onclick="nextpanel();" class="ttt">Test</button>
     <div class="main">
         <div class="upperUI">
             <div class="title">2022학년도 도겸최애능력시험 문제지</div>
             <div class="dkdkdk">도겸 영역</div>
         </div>
-        <div class="question">
-            <div class="quiz"></div>
-            <img src="IFdnehd.png">
+        <div class="panels">
+            <div class="start panel">
+                <div class="box">
+                    <div class="solid">수험번호</div>
+                    <div class="dot">1</div>
+                    <div class="dot">9</div>
+                    <div class="dot">9</div>
+                    <div class="solid">7</div>
+                    <div class="solid">-</div>
+                    <div class="dot">0</div>
+                    <div class="dot">2</div>
+                    <div class="dot">1</div>
+                    <div>8</div>
+                </div>
+                <div class="box name">
+                    <div class="solid">성명</div>
+                    <div class="inputs">
+                        <input placeholder="성명을 입력해주세요.">
+                    </div>
+                </div>
+                <div class="inform">
+                    <ul>
+                        <li>시험지의 해당란에 성명과 수험번호를 쓰고, 답을 정확히 표시하시오.</li>
+                        <li>문항에 따라 배점이 다르니, 각 물음의 끝에 표시된 배점을 참고하시오. 1점과 3점 문항에만 점수가 표시되어 있습니다. 점수 표시가 없는 문항은 모두 2점입니다.</li>
+                        <li>뒤로가기는 지원되지 않으니, 신중하게 답을 선택해 주십시오. 답안을 선택하지 않으면 다음 문제로 넘어가지 않습니다.</li>
+                    </ul>
+                </div>
+                <button onclick="start();">응시하기</button>
+            </div>
+
+
+            <div class="test panel">
+                <div class="quest">
+                    <div class="quiz" id="question">도겸의 call call call에서 누나에게 말한 복권 당첨 금액은?</div>
+                    <img id="imgg" src="IFdnehd.png">
+                </div>
+                <div class="selections">
+                    <div class="sel" id="sel0"><div class="selnum">&#9679</div>&#9312 <span class="ssss"></span></div>
+                    <div class="sel" id="sel1"><div class="selnum">&#9679</div>&#9313 <span class="ssss"></span></div>
+                    <div class="sel" id="sel2"><div class="selnum">&#9679</div>&#9314 <span class="ssss"></span></div>
+                    <div class="sel" id="sel3"><div class="selnum">&#9679</div>&#9315 <span class="ssss"></span></div>
+                </div>
+                <button onclick="nextQuiz();">다음 문항</button>
+            </div>
+
+
+
+            <div class="result panel">
+                result
+                <a id="btnTwt" class="icon twitter" href="javascript:shareTwitter();">트위터</a>
+                <a id="btnKakao" class="icon kakao" href="javascript:shareKakao();">카카오</a>
+            </div>
         </div>
-        <div class="selections">
-            <div class="sel">6천만원</div>
-            <div class="sel">5천만원</div>
-            <div class="sel"></div>
-            <div class="sel"></div>
-            <div class="sel"></div>
-        </div>
+        
     </div>
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script type="text/javascript" src="quizList.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    
 </body>
 </html>
