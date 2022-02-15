@@ -1,0 +1,23 @@
+.selections{
+    width: 100%;
+}
+span{
+    transform: translate(-0.5px, 1px);
+    margin-left: 10px;
+}
+
+img{
+    width: 400px;
+}
+.sel{
+    display: flex;
+    vertical-align: center;
+    padding: 8px;
+}
+.selnum{
+    position: absolute;
+    visibility: hidden;
+}
+.on .selnum{
+    visibility: visible;
+}

@@ -1,0 +1,51 @@
+.box{
+    display: flex;
+    border: 1px solid black;
+    margin: 10px;
+    width: fit-content;
+}
+.solid{
+    border-right: 1px solid black;
+}
+.dot{
+    border-right: 1px dotted black;
+}
+.box div{
+    padding: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box div:nth-child(1){
+    padding: 4px;
+}
+input{
+    border: none;
+    background-color: transparent;
+    font-family: 'Noto Serif KR', serif;
+    width: 10rem;
+    vertical-align: middle;
+    font-size: 1rem;
+}
+.upperUI{
+    margin: 20px;
+}
+.inputs{
+    width: 10rem;
+}
+
+
+.inform{
+    border: 1px solid black;
+    width: 90%;
+    padding: 10px;
+}
+ul{
+    text-align: left;
+}
+li{
+    margin: 10px;
+    list-style: circle;
+}

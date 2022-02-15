@@ -39,32 +39,15 @@ div{
 .panels{
     display: flex;
     justify-content: center;
-    max-width: 26rem;
+    width: 500px;
     margin: auto;
+    position: relative;
 }
 .panel{
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-img{
-    width: 400px;
-}
-.sel{
-    display: flex;
-    vertical-align: center;
-    padding: 0.5rem;
-}
-.selnum{
-    position: absolute;
-    visibility: hidden;
-}
-.on .selnum{
-    visibility: visible;
-}
-span{
-    transform: translate(-0.5px, 1px);
 }
 .hidden{
     visibility: hidden;
@@ -89,60 +72,11 @@ span{
     background-repeat: no-repeat; 
 }   
 
-.box{
-    display: flex;
-    border: 1px solid black;
-    margin: 10px;
-    width: fit-content;
-}
-.solid{
-    border-right: 1px solid black;
-}
-.dot{
-    border-right: 1px dotted black;
-}
-.box div{
-    padding: 4px;
-    padding-left: 6px;
-    padding-right: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.box div:nth-child(1){
-    padding: 4px;
-}
-input{
-    border: none;
-    background-color: transparent;
-    font-family: 'Noto Serif KR', serif;
-    width: 10rem;
-    vertical-align: middle;
-    font-size: 1rem;
-}
-.upperUI{
-    margin: 20px;
-}
-.inputs{
-    width: 10rem;
-}
-
 button{
     border: 1px solid black;
     background-color: transparent;
     font-family: 'Noto Serif KR', serif;
-    padding: 5px;
+    padding: 10px 30px;
+    border-radius: 20px;
 }
 
-.inform{
-    border: 1px solid black;
-    max-width: 26rem;
-    padding: 10px;
-}
-ul{
-    text-align: left;
-}
-li{
-    margin: 10px;
-    list-style: circle;
-}
