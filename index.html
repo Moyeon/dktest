@@ -29,29 +29,32 @@
         </div>
         <div class="panels">
             <div class="start panel">
-                <div class="box">
-                    <div class="solid">수험번호</div>
-                    <div class="dot">1</div>
-                    <div class="dot">9</div>
-                    <div class="dot">9</div>
-                    <div class="solid">7</div>
-                    <div class="solid">-</div>
-                    <div class="dot">0</div>
-                    <div class="dot">2</div>
-                    <div class="dot">1</div>
-                    <div>8</div>
-                </div>
-                <div class="box name">
-                    <div class="solid">성명</div>
-                    <div class="inputs">
-                        <input placeholder="성명을 입력해주세요.">
+                <div class="myinform">
+                    <div class="box">
+                        <div class="solid">수험번호</div>
+                        <div class="dot">1</div>
+                        <div class="dot">9</div>
+                        <div class="dot">9</div>
+                        <div class="solid">7</div>
+                        <div class="solid">-</div>
+                        <div class="dot">0</div>
+                        <div class="dot">2</div>
+                        <div class="dot">1</div>
+                        <div>8</div>
+                    </div>
+                    <div class="box name">
+                        <div class="solid">성명</div>
+                        <div class="inputs">
+                            <input placeholder="이도겸">
+                        </div>
                     </div>
                 </div>
+
                 <div class="inform">
                     <ul>
-                        <li>시험지의 해당란에 성명과 수험번호를 쓰고, 답을 정확히 표시하시오.</li>
+                        <li>상단에 성명을 쓰고, 답을 정확히 표시하시오. 성명을 쓰지 않는 경우 성명 이도겸으로 성적표가 출력됩니다.</li>
                         <li>문항에 따라 배점이 다르니, 각 물음의 끝에 표시된 배점을 참고하시오. 1점과 3점 문항에만 점수가 표시되어 있습니다. 점수 표시가 없는 문항은 모두 2점입니다.</li>
-                        <li>뒤로가기는 지원되지 않으니, 신중하게 답을 선택해 주십시오. 답안을 선택하지 않으면 다음 문제로 넘어가지 않습니다.</li>
+                        <li>뒤로가기는 지원되지 않으니, 충분히 고민한 후 다음 문항 버튼을 누르시오. 답안을 선택하지 않으면 다음 문제로 넘어가지 않습니다.</li>
                     </ul>
                 </div>
                 <button onclick="start();">응시하기</button>
@@ -69,16 +72,24 @@
                     <div class="sel" id="sel2"><div class="selnum">&#9679</div>&#9314 <span class="ssss"></span></div>
                     <div class="sel" id="sel3"><div class="selnum">&#9679</div>&#9315 <span class="ssss"></span></div>
                 </div>
-                <button onclick="nextQuiz();">다음 문항</button>
+                <button onclick="nextQuiz();">다음 문항 &rarr;</button>
             </div>
 
 
 
             <div class="result panel">
-                result
-                <a id="btnTwt" class="icon twitter" href="javascript:shareTwitter();">트위터</a>
-                <a id="btnKakao" class="icon kakao" href="javascript:shareKakao();">카카오</a>
+                <p>친구에게 공유하기</p>
+                <div class="shbtns">
+                    <div id="btnShare" class="icon share" onclick="shareCopy();"></div>
+                    <div id="btnTwt" class="icon twitter" onclick="shareTwitter();"></div>
+                    <div id="btnKakao" class="icon kakao" onclick="shareKakao();"></div>
+                </div>
+                
             </div>
+        </div>
+
+        <div class="bottomUI">
+
         </div>
         
     </div>

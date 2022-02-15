@@ -1,3 +1,14 @@
 .panels{
     width: 100vw;
 }
+li{
+    margin: 5px;
+}
+.main{
+    width: 100vw;
+}
+
+.myinform{
+    flex-direction: column;
+    align-items: center;
+}

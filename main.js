@@ -34,7 +34,12 @@ var ansScore = 0;
 var nowQuiz = 0;
 
 function quizLoad(quiznum){
-    question.innerHTML = quizList[quiznum].q;
+    ansScore = quizList[quiznum].score;
+    var innertext = quiznum+1 + ". " + quizList[quiznum].q;
+    if(ansScore%2 == 1){
+        innertext += " (" + ansScore + "점)"
+    }
+    question.innerHTML = innertext;
     ansNum = randBetween(0, 3);
     for(var i=0; i<4; i++){
         if(i<ansNum){
@@ -54,7 +59,6 @@ function quizLoad(quiznum){
         img.classList.add("hidden");
     }
     selected = -1;
-    ansScore = quizList[quiznum].score;
     nowQuiz = quiznum;
 }
 
@@ -90,6 +94,7 @@ function shareTwitter() {
     var sendUrl = "devpad.tistory.com/"; // 전달할 URL
     window.open("https://twitter.com/intent/tweet?text=" + sendText + "&url=" + sendUrl);
 }
+
 function shareKakao() {
  
     // 사용할 앱의 JavaScript 키 설정
@@ -97,26 +102,27 @@ function shareKakao() {
    
     // 카카오링크 버튼 생성
     Kakao.Link.createDefaultButton({
-      container: '#btnKakao', // 카카오공유버튼ID
-      objectType: 'feed',
-      content: {
-        title: "2022학년도 도겸최애능력시험 결과는", // 보여질 제목
-        description: "개발새발 블로그입니다", // 보여질 설명
-        imageUrl: "2022dkloverstest.com/", // 콘텐츠 URL
-        link: {
-           mobileWebUrl: "2022dkloverstest.com/",
-           webUrl: "2022dkloverstest.com/"
+        container: '#btnKakao', // 카카오공유버튼ID
+        objectType: 'feed',
+        content: {
+            title: "2022학년도 도겸최애능력시험 결과는", // 보여질 제목
+            description: "개발새발 블로그입니다", // 보여질 설명
+            imageUrl: "2022dkloverstest.com/", // 콘텐츠 URL
+            link: {
+            mobileWebUrl: "2022dkloverstest.com/",
+            webUrl: "2022dkloverstest.com/"
+            }
         }
-      }
     });
-  }
+}
 
-  function copy_to_clipboard() {
-    var copyText = document.getElementById("myInput");
-    copyText.select();
-    document.execCommand("Copy");
-    console.log('Copied!');
-  }
-
+function copyToClipboard(val) {
+    const t = document.createElement("textarea");
+    document.body.appendChild(t);
+    t.value = val;
+    t.select();
+    document.execCommand('copy');
+    document.body.removeChild(t);
+}
 //9679 검정 동그라미
 //9312 ~ 숫자 동그라미

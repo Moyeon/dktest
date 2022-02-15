@@ -1,18 +1,27 @@
 .selections{
-    width: 100%;
+    width: 90%;
+    font-size: 1.25rem;
 }
+.quest{
+    width: 90%;
+    margin-top: 12px;
+}
+
 span{
     transform: translate(-0.5px, 1px);
-    margin-left: 10px;
+    margin-left: 12px;
 }
 
 img{
-    width: 400px;
+    display: block;
+    width: 90%;
+    margin: auto;
 }
 .sel{
     display: flex;
     vertical-align: center;
     padding: 8px;
+    border-radius: 2rem;
 }
 .selnum{
     position: absolute;
@@ -20,4 +29,8 @@ img{
 }
 .on .selnum{
     visibility: visible;
+}
+
+.sel:hover{
+    background-color: rgba(0, 0, 0, 0.1);
 }
