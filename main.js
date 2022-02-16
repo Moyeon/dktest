@@ -49,12 +49,13 @@ function quizLoad(quiznum){
     for(var i=0; i<4; i++){
         if(ansArr[i]==3){
             ssss[i].innerHTML = quizList[quiznum].answer;
+            ansNum = i * 1;
         }
         else{
             ssss[i].innerHTML = quizList[quiznum].wrong[ansArr[i]];
         }
     }
-
+    
     //IMG
     if(quizList[quiznum].isImg){
         if(img.classList.contains("hidden")){
