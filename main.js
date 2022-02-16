@@ -18,9 +18,11 @@ function start(){
 }
 
 function resultPanel(){
+    document.getElementById("body").classList.add("respage");
+    panels[0].style.visibility = "hidden";
     panels[1].style.visibility = "hidden";
     panels[2].style.visibility = "visible";
-    var resultText = "";
+    document.getElementById("rstscore").innerHTML = score;
 }
 
 var question = document.getElementById("question");
@@ -34,22 +36,26 @@ var ansScore = 0;
 var nowQuiz = 0;
 
 function quizLoad(quiznum){
+    //Q
     ansScore = quizList[quiznum].score;
     var innertext = quiznum+1 + ". " + quizList[quiznum].q;
     if(ansScore%2 == 1){
         innertext += " (" + ansScore + "점)"
     }
     question.innerHTML = innertext;
-    ansNum = randBetween(0, 3);
+
+    //A
+    ansArr = generateRand();
     for(var i=0; i<4; i++){
-        if(i<ansNum){
-            ssss[i].innerHTML = quizList[quiznum].wrong[i];
-        }else if(i==ansNum){
+        if(ansArr[i]==3){
             ssss[i].innerHTML = quizList[quiznum].answer;
-        }else{
-            ssss[i].innerHTML = quizList[quiznum].wrong[i-1];
+        }
+        else{
+            ssss[i].innerHTML = quizList[quiznum].wrong[ansArr[i]];
         }
     }
+
+    //IMG
     if(quizList[quiznum].isImg){
         if(img.classList.contains("hidden")){
             img.classList.remove("hidden");
@@ -64,6 +70,17 @@ function quizLoad(quiznum){
 
 function randBetween(minnum, maxnum){
     return Math.floor(Math.random() * (maxnum - minnum + 1)) + minnum;
+}
+
+function generateRand(){
+    var arr = [-1, -1, -1, -1];
+    var k;
+    for(var j=0; j<4; j++){
+        k = randBetween(0,4);
+        while(arr[k]!=-1) k = (k+1) % 4;
+        arr[k] = j;
+    }
+    return arr;
 }
 
 function select(){
@@ -90,8 +107,8 @@ for(var i=0; i<4; i++){
 }
 
 function shareTwitter() {
-    var sendText = "2022학년도 도겸최애능력시험 결과는"; // 전달할 텍스트
-    var sendUrl = "devpad.tistory.com/"; // 전달할 URL
+    var sendText = "2022학년도 도겸최애능력시험 결과는 " + score + "점입니다."; // 전달할 텍스트
+    var sendUrl = "2022dkloverstest.com/"; // 전달할 URL
     window.open("https://twitter.com/intent/tweet?text=" + sendText + "&url=" + sendUrl);
 }
 
@@ -106,7 +123,7 @@ function shareKakao() {
         objectType: 'feed',
         content: {
             title: "2022학년도 도겸최애능력시험 결과는", // 보여질 제목
-            description: "개발새발 블로그입니다", // 보여질 설명
+            description: score + "점 입니다.", // 보여질 설명
             imageUrl: "2022dkloverstest.com/", // 콘텐츠 URL
             link: {
             mobileWebUrl: "2022dkloverstest.com/",
@@ -124,5 +141,9 @@ function copyToClipboard(val) {
     document.execCommand('copy');
     document.body.removeChild(t);
 }
+
 //9679 검정 동그라미
 //9312 ~ 숫자 동그라미
+
+
+//resultPanel();

@@ -18,9 +18,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="test.css">
     <link rel="stylesheet" href="start.css">
+    <link rel="stylesheet" href="result.css">
     <link rel="stylesheet" media="(max-width: 500px)" href="mobile.css">
 </head>
-<body>
+<body id="body">
     <button onclick="nextpanel();" class="ttt">Test</button>
     <div class="main">
         <div class="upperUI">
@@ -57,7 +58,7 @@
                         <li>뒤로가기는 지원되지 않으니, 충분히 고민한 후 다음 문항 버튼을 누르시오. 답안을 선택하지 않으면 다음 문제로 넘어가지 않습니다.</li>
                     </ul>
                 </div>
-                <button onclick="start();">응시하기</button>
+                <button onclick="start();" class="startbtn">응시하기</button>
             </div>
 
 
@@ -65,6 +66,7 @@
                 <div class="quest">
                     <div class="quiz" id="question">도겸의 call call call에서 누나에게 말한 복권 당첨 금액은?</div>
                     <img id="imgg" src="IFdnehd.png">
+                    <div class="fakeimg" id="fakeimg"></div>
                 </div>
                 <div class="selections">
                     <div class="sel" id="sel0"><div class="selnum">&#9679</div>&#9312 <span class="ssss"></span></div>
@@ -78,6 +80,46 @@
 
 
             <div class="result panel">
+                <h2>당신의 점수는<span id="rstscore"></span> 점입니다.</h2>
+                <div class="tjdwjrvy">
+                    <h3>2022학년도 도겸최애능력시험 성적통지표</h3>
+                    <table>
+                        <tr>
+                            <th>수험번호</th>
+                            <th colspan="2">성 명</th>
+                            <th colspan="2">출신고교</th>
+                        </tr>
+                        <tr>
+                            <td>19970218</td>
+                            <td colspan="2" id="name">이도겸</td>
+                            <td colspan="2">세봉고등학교</td>
+                        </tr>
+                        <tr>
+                            <th>구 분</th>
+                            <td>고잉 영역</td>
+                            <td>노래 영역</td>
+                            <td>TMI 영역</td>
+                            <td>SNS 영역</td>
+                        </tr>
+                        <tr>
+                            <th>표준점수</th>
+                            <td class="ps">0</td>
+                            <td class="ps">0</td>
+                            <td class="ps">0</td>
+                            <td class="ps">0</td>
+                        </tr>
+                        <tr>
+                            <th>등 급</th>
+                            <td class="dg">0</td>
+                            <td class="dg">0</td>
+                            <td class="dg">0</td>
+                            <td class="dg">0</td>
+                        </tr>
+                    </table>
+                    <p>2022. 02. 18.</p>
+                    <h3>도겸교육과정평가원장</h3>
+                </div>
+
                 <p>친구에게 공유하기</p>
                 <div class="shbtns">
                     <div id="btnShare" class="icon share" onclick="shareCopy();"></div>
@@ -88,11 +130,9 @@
             </div>
         </div>
 
-        <div class="bottomUI">
-
-        </div>
         
     </div>
+    <script src="html2canvas.js"></script>
     <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
     <script type="text/javascript" src="quizList.js"></script>
     <script type="text/javascript" src="main.js"></script>

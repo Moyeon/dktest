@@ -17,6 +17,7 @@ div{
     top: 12px;
     padding: 12px;
     z-index: 10;
+    visibility: hidden;
 }
 .main{
     justify-content: center;

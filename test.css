@@ -4,7 +4,7 @@
 }
 .quest{
     width: 90%;
-    margin-top: 12px;
+    margin-top: 24px;
 }
 
 span{
@@ -31,6 +31,13 @@ img{
     visibility: visible;
 }
 
+.on{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
 .sel:hover{
     background-color: rgba(0, 0, 0, 0.1);
+}
+.fakeimg{
+    height: 36px;
 }
