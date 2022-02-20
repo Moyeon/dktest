@@ -1,5 +1,5 @@
 var panels = document.getElementsByClassName("panel");
-var myname = '이도겸';
+var myname = 'DK';
 var fastmode = false;
 var nnn;
 
@@ -70,13 +70,13 @@ function quizLoad(quiznum){
     if(nowTheme < quizList[quiznum].theme){
         nowTheme = quizList[quiznum].theme;
         if(nowTheme == 0){
-            theme.innerHTML = "고잉";
+            theme.innerHTML = "GOING";
         }else if(nowTheme == 1){
-            theme.innerHTML = "노래";
+            theme.innerHTML = "MUSIC";
         }else if(nowTheme == 2){
-            theme.innerHTML = "개인";
+            theme.innerHTML = "SEOKMIN";
         }else {
-            theme.innerHTML = "사회";
+            theme.innerHTML = "SOCIAL";
         }
         
     }
@@ -85,7 +85,7 @@ function quizLoad(quiznum){
     ansScore = quizList[quiznum].score;
     var innertext = quiznum+1 + ". " + quizList[quiznum].q;
     if(ansScore%2 == 1){
-        innertext += " (" + ansScore + "점)"
+        innertext += " (" + ansScore + " points)"
     }
     question.innerHTML = innertext;
 
@@ -100,7 +100,6 @@ function quizLoad(quiznum){
             ssss[i].innerHTML = quizList[quiznum].wrong[ansArr[i]];
         }
     }
-    
     
     selected = -1;
     nowQuiz = quiznum;
@@ -150,11 +149,11 @@ for(var i=0; i<4; i++){
 function shareTwitter() {
     var sendText = `[2022학년도 %23도겸최애능력시험 결과]`+"%0a%0a";
     if (nnn){
-        sendText += nnn + "님의 점수는 ";
+        sendText += nnn + "'s score is ";
     }else{
-        sendText += "당신의 점수는 ";
+        sendText += "Your score is ";
     }
-    sendText += score + "점입니다.%0a"; // 전달할 텍스트
+    sendText += score + " points.%0a"; // 전달할 텍스트
     var sendUrl = "2022dkloverstest.com/"; // 전달할 URL
     window.open("https://twitter.com/intent/tweet?text=" + sendText + "&url=" + sendUrl);
 }

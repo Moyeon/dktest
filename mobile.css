@@ -6,6 +6,7 @@ li{
 }
 .main{
     width: 100vw;
+    margin-top: 12px;
 }
 
 .myinform{
@@ -16,9 +17,15 @@ li{
     margin: 5px auto;
 }
 .startbtn{
-    margin-top: 12px;
+    margin-top: 24px;
 }
 
 .tjdwjrvy{
     font-size: 0.75rem;
+}
+.language{
+    top: -4px;
+    right: 8px;
+    font-size: 0.5rem;
+    padding: 4px 8px;
 }

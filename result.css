@@ -52,3 +52,37 @@ p{
 .result{
     width: 100%;
 }
+.shbtns{
+    position: relative;
+}
+.copied{
+    position: absolute;
+    text-align: center;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.582);
+    top: 50%;
+    padding: 12px;
+    border-radius: 24px;
+    color: white;
+    visibility: hidden;
+}
+.copied2{
+    visibility: visible;
+    animation: blink 2s;
+}
+@keyframes blink {
+    from{
+        opacity: 0;
+    }
+    15%, 60%{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+.bottom{
+    margin-top: 48px;
+    font-size: 0.5rem;
+}

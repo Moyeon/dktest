@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&family=Song+Myung&display=swap');
+*{
+    word-spacing: normal;
+}
 html{
     font-size: 16px;
 }
@@ -19,11 +22,15 @@ div{
     z-index: 10;
     visibility: hidden;
 }
+.ttt:nth-child(2){
+    top: 60px;
+}
 .main{
     justify-content: center;
     position: relative;
     width: 512px;
     margin: auto;
+    margin-top: 48px;
 }
 .title{
     font-family: 'Noto Serif KR', serif;
@@ -57,10 +64,6 @@ div{
     border: 1px solid transparent;
     width: 90%;
 }
-.hidden{
-    visibility: hidden;
-    height: 0;
-}
 .icon{ 
     position: relative; 
     display: inline-block;
@@ -91,6 +94,40 @@ button{
     font-size: 1rem;
     margin: 12px;
 }
+button:hover{
+    background-color: rgba(0, 0, 0, 0.05);
+}
 .shbtns{
     display: flex;
+}
+
+.theme{
+    position: absolute;
+    right: 0;
+    padding: 6px;
+    top: -54px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.language{
+    position: absolute;
+    margin: 0;
+    right: 0;
+    top: -36px;
+    padding: 8px 16px;
+    font-size: 0.75rem
+}
+.ppp{
+    position: absolute;
+    background: url("img/ppp.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 2rem;
+    height: 2rem;
+    right: 30%;
+    bottom: 0.3rem;
+    opacity: 0.6;
 }

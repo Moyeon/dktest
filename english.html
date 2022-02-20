@@ -9,27 +9,29 @@
     <meta name="twitter:title" content="2022학년도 도겸최애능력시험" />
     <meta name="twitter:description" content="도겸이의 생일을 축하하며, 당신은 도겸이에 대해 얼마나 아십니까?" />
     <meta name="twitter:image" content="http://2022dkloverstest.com/img/dkthumb.png" />
-    <title>2022도겸최애능력시험</title>
+    <title>2022 DK Lovers Test</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="test.css">
     <link rel="stylesheet" href="start.css">
     <link rel="stylesheet" href="result.css">
     <link rel="stylesheet" media="(max-width: 500px)" href="mobile.css">
+    <link rel="stylesheet" href="english.css">
+
 </head>
 <body id="body">
     <button onclick="nextpanel();" class="ttt">Test</button>
     <button onclick="fast();" class="ttt">Fast</button>
     <div class="main">
         <div class="upperUI">
-            <button class="language" onclick="eng();">English</button>
-            <div class="title">2022학년도 도겸최애능력시험 문제지</div>
+            <button class="language" onclick="kor();">한국어</button>
+            <div class="title">2022 DK Lovers Test</div>
             <div class="dkdkdk">도겸 영역</div>
         </div>
         <div class="panels">
             <div class="start panel">
                 <div class="myinform">
                     <div class="box">
-                        <div class="solid">수험번호</div>
+                        <div class="solid">Registration Number</div>
                         <div class="dot">1</div>
                         <div class="dot">9</div>
                         <div class="dot">9</div>
@@ -41,21 +43,21 @@
                         <div>8</div>
                     </div>
                     <div class="box name">
-                        <div class="solid">성명</div>
+                        <div class="solid">Name</div>
                         <div class="inputs">
-                            <input placeholder="이도겸" id="nnn">
+                            <input placeholder="DK" id="nnn">
                         </div>
                     </div>
                 </div>
 
                 <div class="inform">
                     <ul>
-                        <li>상단에 성명을 쓰고, 답을 정확히 표시하시오. 성명을 쓰지 않는 경우 성명 이도겸으로 성적표가 출력됩니다.</li>
-                        <li>문항에 따라 배점이 다르니, 각 물음의 끝에 표시된 배점을 참고하시오. 3점과 5점 문항에만 점수가 표시되어 있습니다. 점수 표시가 없는 문항은 모두 4점입니다.</li>
-                        <li>뒤로가기는 지원되지 않으니, 충분히 고민한 후 다음 문항 버튼을 누르시오. 답안을 선택하지 않으면 다음 문제로 넘어가지 않습니다.</li>
+                        <li>Write your name at the top, and indicate your answer correctly. If you don't write your name, your name will be printed as DK.</li>
+                        <li>The points are different depending on the question, so refer to the points indicated at the end of each question. Only the 3 and 5 points questions show the score. All questions without a score mark are 4 points.</li>
+                        <li>Going backward is not supported, so think about it enough and press the next question button. If you don't select the answer, you won't move on to the next question.</li>
                     </ul>
                 </div>
-                <button onclick="start();" class="startbtn">응시하기</button>
+                <button onclick="start();" class="startbtn">Start</button>
             </div>
 
 
@@ -74,44 +76,44 @@
                         <div class="sel" id="sel3"><div class="selnum">&#9679</div>&#9315 <span class="ssss"></span></div>
                     </div>
                 </div>
-                
-                <button onclick="nextQuiz();">다음 문항 &rarr;</button>
+                <button onclick="nextQuiz();">Next Question &rarr;</button>
                 <h5>-<span id="pagenum">9</span>-</h5>
             </div>
 
 
 
             <div class="result panel">
-                <h2>당신의 점수는<span id="rstscore"></span> 점입니다.</h2>
+                <h2>Your score is <span id="rstscore"></span>.</h2>
                 <div class="tjdwjrvy">
-                    <h3>2022학년도 도겸최애능력시험 성적통지표</h3>
+                    <h3>2022 DK Lovers Test Grade Card</h3>
                     <table>
                         <tr>
-                            <th>수험번호</th>
-                            <th colspan="2">성 명</th>
-                            <th colspan="2">출신고교</th>
+                            <th>Registration Number
+                            </th>
+                            <th colspan="2">Name</th>
+                            <th colspan="2">School</th>
                         </tr>
                         <tr>
                             <td>19970218</td>
-                            <td colspan="2" id="name">이도겸</td>
-                            <td colspan="2">세봉고등학교</td>
+                            <td colspan="2" id="name">DK</td>
+                            <td colspan="2">Se-bong Highschool</td>
                         </tr>
                         <tr>
-                            <th>구 분</th>
-                            <td>고잉 영역</td>
-                            <td>노래 영역</td>
-                            <td>개인 영역</td>
-                            <td>사회 영역</td>
+                            <th>Category</th>
+                            <td>GOING</td>
+                            <td>MUSIC</td>
+                            <td>SEOKMIN</td>
+                            <td>SOCIAL</td>
                         </tr>
                         <tr>
-                            <th>표준점수</th>
+                            <th>Score</th>
                             <td class="ps">0</td>
                             <td class="ps">0</td>
                             <td class="ps">0</td>
                             <td class="ps">0</td>
                         </tr>
                         <tr>
-                            <th>등 급</th>
+                            <th>Grade</th>
                             <td class="dg">0</td>
                             <td class="dg">0</td>
                             <td class="dg">0</td>
@@ -119,17 +121,18 @@
                         </tr>
                     </table>
                     <p>2022. 02. 18.</p>
-                    <h3>도겸교육과정평가원장<div class="ppp"></div></h3>
+                    <h3>DK Lovers Club<div class="ppp"></div></h3>
+                    
                 </div>
-                <button onclick="retest();">재응시하기</button>
-                <p>친구에게 공유하기</p>
+                <button onclick="retest();">Re-take</button>
+                <p>Share</p>
                 <div class="shbtns">
                     <div id="btnShare" class="icon share" onclick="shareCopy();"></div>
                     <div id="btnTwt" class="icon twitter" onclick="shareTwitter();"></div>
                     <div id="btnKakao" class="icon kakao" onclick="shareKakao();"></div>
                 </div>
-                <div class="copied" id="copied">결과가 클립보드에 복사되었습니다.</div>
-                <div class="bottom">모든 문의사항은 @readytolovedk로 부탁드립니다.</div>
+                <div class="copied" id="copied">Copied to the clipboard</div>
+                <div Class="Bottom"> For all inquiries, please contact @readytolovesk.</div>
                 
             </div>
         </div>
@@ -137,8 +140,8 @@
         
     </div>
     <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
-    <script type="text/javascript" src="quizList.js"></script>
-    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="quizListEng.js"></script>
+    <script type="text/javascript" src="mainEng.js"></script>
     
 </body>
 </html>

@@ -1,21 +1,32 @@
 .selections{
     width: 90%;
     font-size: 1.25rem;
+    margin: auto;
 }
 .quest{
     width: 90%;
+    margin: auto;
     margin-top: 24px;
+
 }
 
 span{
     transform: translate(-0.5px, 1px);
     margin-left: 12px;
 }
-
+#pagenum{
+    transform: none;
+    margin: 4px;
+}
 img{
     display: block;
     width: 90%;
-    margin: auto;
+    margin: 24px auto;
+}
+.hidden{
+    visibility: hidden;
+    height: 0;
+    margin: 12px auto;
 }
 .sel{
     display: flex;
@@ -38,6 +49,8 @@ img{
 .sel:hover{
     background-color: rgba(0, 0, 0, 0.1);
 }
-.fakeimg{
-    height: 36px;
+.height{
+    min-height: 60vh;
+    margin: auto;
+    width: 100%;
 }
